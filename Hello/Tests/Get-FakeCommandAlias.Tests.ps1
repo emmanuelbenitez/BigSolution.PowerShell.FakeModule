@@ -19,18 +19,18 @@
 Import-Module -Name $PSScriptRoot\..\Hello -Force
 
 Describe 'Get-FakeCommandAlias' {
-    InModuleScope Alias {
-        It 'Returns itself and aka alias.' {
+    InModuleScope Hello {
+        It 'Returns itself and faka alias.' {
             $expected = @(Get-Command -Name Get-FakeCommandAlias) + @(Get-Alias -Definition Get-FakeCommandAlias)
 
             $actual = Get-FakeCommandAlias -Name Get-FakeCommandAlias
 
             Compare-Object -ReferenceObject $expected -DifferenceObject $actual | Should -BeNullOrEmpty
         }
-        It 'Returns itself and aka alias wen invoked via alias too.' {
+        It 'Returns itself and faka alias wen invoked via alias too.' {
             $expected = @(Get-Command -Name Get-FakeCommandAlias) + @(Get-Alias -Definition Get-FakeCommandAlias)
 
-            $actual = aka -Name aka
+            $actual = faka -Name faka
 
             Compare-Object -ReferenceObject $expected -DifferenceObject $actual | Should -BeNullOrEmpty
         }
