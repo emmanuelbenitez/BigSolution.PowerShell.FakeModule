@@ -35,7 +35,7 @@ Describe 'Get-FakeCommandAlias' {
             Compare-Object -ReferenceObject $expected -DifferenceObject $actual | Should -BeNullOrEmpty
         }
         It 'Throws for an unknown command or alias.' {
-            { Get-FakeCommandAlias -Name Get-Unknown -ErrorAction Stop } | Should -Throw 'The term ''Get-Unknown'' is not recognized as the name of a cmdlet, function, script file, or operable program.'
+            { Get-FakeCommandAlias -Name Get-Unknown -ErrorAction Stop } | Should -Throw 'The term ''Get-Unknown'' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.'
         }
     }
 }
