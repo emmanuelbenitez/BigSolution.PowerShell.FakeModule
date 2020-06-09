@@ -19,7 +19,7 @@
 @{
    RootModule            = 'BigSolution.FakeModule.psm1'
    ModuleVersion         = '1.0.0'
-   GUID                  = 'BFE6C979-73F7-4DBF-BCA9-40F766D17447'
+   GUID                  = 'ddb77674-33a0-4abd-9680-b1520bae183a'
    Author                = 'Emmanuel Benitez'
    CompanyName           = 'Emmanuel Benitez'
    Copyright             = '(c) 2020 Emmanuel Benitez. All rights reserved.'
