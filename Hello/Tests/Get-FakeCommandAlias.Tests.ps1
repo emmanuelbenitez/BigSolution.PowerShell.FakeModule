@@ -16,7 +16,7 @@
 
 #endregion
 
-Import-Module -Name $PSScriptRoot\..\Alias -Force
+Import-Module -Name $PSScriptRoot\..\Hello -Force
 
 Describe 'Get-FakeCommandAlias' {
     InModuleScope Alias {
